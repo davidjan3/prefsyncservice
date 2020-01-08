@@ -31,9 +31,10 @@ You may need to change `android:name` if the class isn’t in your app’s main 
 ```
 compile 'com.google.android.gms:play-services-wearable:8.3+'
 ```
-4.Instantiate `PrefListener` and resume (/pause) wherever settings you want to sync are changed in your app. A typical case would be in a `PreferenceActivity` or configuration `Fragment`; in either one you’d instantiate a `PrefListener` in your `onCreate` method, resume in your `onStart`, and pause in your `onStop`.
+4. On both sides:
+Instantiate `PrefListener` and resume (/pause) wherever settings you want to sync are changed in your app. A typical case would be in a `PreferenceActivity` or configuration `Fragment`; in either one you’d instantiate a `PrefListener` in your `onCreate` method, resume in your `onStart`, and pause in your `onStop`.
 
-5.On the receiving side (optional):
+5. On the receiving side (optional):
   - Add an `onSharedPreferenceChanged` listener to detect when a value has been synchronized, and act on the new data
 
 ## Optional Extensions
